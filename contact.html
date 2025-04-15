@@ -1,28 +1,66 @@
-
-<!-- Contact -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Jeremia</title>
+  <link rel="stylesheet" href="contact.css" />
 </head>
 <body>
-    <header>
-        <h1>Contact</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Hubungi Saya</h2>
-        <p>Email: jeremylelemboto@gmail.com</p>
-        <p>Telepon: 085157545339</p>
-    </main>
+  <div id="loader" class="loader"></div>
+
+  <header class="fade-nav">
+    <div class="container">
+      <h1 class="nav-text">Contact</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="nav-text">Home</a></li>
+          <li><a href="gallery.html" class="nav-text">Gallery</a></li>
+          <li><a href="blog.html" class="nav-text">Blog</a></li>
+          <li><a href="contact.html" class="nav-text">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container contact fade-in-section">
+      <h2 class="fade-text">Hubungi Saya</h2>
+      <p class="fade-text">Jangan ragu untuk menghubungi saya melalui form di bawah ini.</p>
+
+      <img src="Gambar/gmail-google-logo-rebrand-workspace-design_dezeen_2364_col_0.webp" alt="Contact Banner" class="fade-text" />
+
+      <form id="contact-form" class="fade-text">
+        <label for="name">Nama</label>
+        <input type="text" id="name" name="name" required placeholder="Masukkan nama lengkap Anda" />
+      
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="contoh@email.com" />
+      
+        <label for="message">Pesan</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Tulis pesan Anda di sini..."></textarea>
+      
+        <button type="submit">Kirim Pesan</button>
+        <p id="form-response"></p>
+      </form>
+      <div id="form-response" class="success-message hidden">
+        Pesan kamu berhasil dikirim! ✅
+      </div>
+      
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Jeremia. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="contact.js"></script>
+
+    <!-- Tombol Dark Mode -->
+    <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">🌙</button>
+    <script src="darkMode.js"></script>
+    
 </body>
 </html>

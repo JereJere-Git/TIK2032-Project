@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Personal Homepage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Jeremia</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h1>Selamat Datang di Laman Pribadi Jeremia</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+
+  <!-- Loader -->
+  <div id="loader"></div>
+
+
+
+  <!-- Konten utama -->
+  <div id="body-content" style="opacity: 0;">
+    <header class="header fade-item">
+      <div class="container">
+        <h1 class="logo">Jeremia</h1>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </nav>
+      </div>
     </header>
-    <main>
-        <h2>About Me</h2>
-        <p>Selamat datang di website saya. Ini adalah web tugas Project TIK2032.</p>
+
+    <main class="main">
+      <div class="container">
+        <section class="intro">
+          <div class="about-wrapper">
+            <img src="Gambar/WhatsApp Image 2025-04-15 at 14.42.00_86e750f2.jpg" alt="Foto Jeremia" class="about-photo fade-item" />
+            <div class="about-text fade-item">
+              <h2>About Me</h2>
+              <p>Selamat datang di website Jeremia Lelemboto. Ini adalah laman web pribadi saya.</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
-    <footer>
-        <p>&copy; 2025 My Website. All rights reserved.</p>
+
+    <footer class="footer fade-item">
+      <div class="container">
+        <p>&copy; 2025 Jeremia. All rights reserved.</p>
+      </div>
     </footer>
+  </div>
+
+
+<!-- Tombol Dark Mode -->
+<button id="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+    🌙
+  </button>
+  
+  
+  <script src="loader.js"></script>
+  <script src="darkMode.js"></script>
+  
 </body>
 </html>

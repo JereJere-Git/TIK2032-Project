@@ -1,0 +1,244 @@
+/* Reset dan font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    color: #2e2e2e;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Link */
+  a {
+    text-decoration: none;
+    color: #ff5e62;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #ff9966;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  /* Header */
+  .header {
+    background: linear-gradient(to right, #18214b, #dddddd);
+    padding: 20px 0;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  
+  .nav {
+    margin-top: 12px;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-list li a {
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-list li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #f5f5f5;
+  }
+  
+  /* Main Section */
+  .main {
+    padding: 60px 0;
+  }
+  
+  .intro h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .intro p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* About Section */
+  .about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .about-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid #158dbd;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    will-change: transform;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .about-photo:hover {
+    transform: rotateX(8deg) rotateY(8deg) scale(1.05);
+    box-shadow: 0 15px 30px rgba(49, 40, 163, 0.25), 0 0 20px rgba(49, 40, 163, 0.3);
+  }
+  
+  
+  
+  .about-text {
+    flex: 1;
+    color: #444;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Footer */
+  .footer {
+    background: linear-gradient(to right, #727272, #727272);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 60px;
+  }
+  
+  /* Loader putih full layar */
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 9999;
+    transition: opacity 0.6s ease;
+  }
+  
+  /* Fade-in konten */
+  .fade-in {
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Efek gradual untuk tiap elemen */
+  .fade-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .fade-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffffcc;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    padding: 14px 16px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  #dark-mode-toggle:hover {
+    background-color: #eeeeee;
+    transform: scale(1.1);
+  }
+  
+  body.dark #dark-mode-toggle {
+    background-color: #2c2c2caa;
+    color: #f5f5f5;
+  }
+  
+  /* ========== DARK MODE ========== */
+body.dark {
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    color: #f5f5f5;
+  }
+  
+  body.dark .header {
+    background: linear-gradient(to right, #1f1f1f, #2e2e2e);
+    color: #f5f5f5;
+  }
+  
+  body.dark .nav-list li a {
+    background: rgba(255, 255, 255, 0.05);
+    color: #e0e0e0;
+  }
+  
+  body.dark .nav-list li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+  
+  body.dark .about-text {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
+  }
+  
+  body.dark .intro h2 {
+    color: #f0f0f0;
+  }
+  
+  body.dark .intro p {
+    color: #cccccc;
+  }
+  
+  body.dark .footer {
+    background: linear-gradient(to right, #111111, #111111);
+    color: #bbbbbb;
+  }
+  
+  body.dark #loader {
+    background-color: #121212;
+  }
+  
